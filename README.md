@@ -18,11 +18,20 @@ O sistema tem como foco:
 - **Java** (linguagem principal do projeto)
 
 ### 💡 Pretendo usar futuramente (ainda estou aprendendo):
-- **Java Swing ou JavaFX** – para criar uma interface gráfica.
 - **Apache POI** – para manipulação de planilhas Excel.
 - **iText ou JasperReports** – para gerar etiquetas em PDF.
 - **Banco de dados (MySQL, SQLite ou Firebase)** – para armazenar os produtos.
 - **Integração com leitor de código de barras** – para automatizar a leitura no caixa.
+## 🎨 Front-end (futuro)
+
+Ainda estou aprendendo, mas quero que o sistema tenha uma **interface visual** para facilitar o uso. No futuro, quero tentar usar:
+
+- **HTML e CSS** – para criar as telas (visualmente simples e funcionais).
+- **Java (Servlets ou Spring Boot)** – para conectar o front com o back-end.
+- **Thymeleaf** – como motor de template (caso eu use Spring Boot).
+
+Essas tecnologias me permitirão criar um sistema web onde as telas do usuário (como cadastro de produtos ou alertas) são feitas em HTML/CSS, e toda a lógica é mantida em Java.
+
 
 Por enquanto, estou focando apenas em **Java puro**, para consolidar minha lógica e estrutura de programação. Conforme eu for aprendendo mais sobre essas tecnologias, vou incorporando no projeto.
 

@@ -35,7 +35,7 @@ Essas tecnologias me permitirão criar um sistema web onde as telas do usuário 
 
 Por enquanto, estou focando apenas em **Java puro**, para consolidar minha lógica e estrutura de programação. Conforme eu for aprendendo mais sobre essas tecnologias, vou incorporando no projeto.
 
-## 📍 Status do Projeto
+## Status do Projeto
 
 > Em desenvolvimento e aprendizado.
 
@@ -45,7 +45,7 @@ Estou estudando conceitos como:
 - Polimorfismo e sobrescrita de métodos
 - Manipulação de listas e arquivos
 
-## 🗂Funcionalidades iniciais planejadas
+## Funcionalidades iniciais planejadas
 
 - [x] Cadastro de produtos com validade
 - [ ] Geração simples de planilha (modo texto ou CSV)

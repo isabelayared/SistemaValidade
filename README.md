@@ -2,7 +2,6 @@
 
 O **ValidaFARMA** é um sistema de gerenciamento de estoque desenvolvido para otimizar o controle de validade de produtos em farmácias e drogarias. Este projeto surgiu da necessidade de automatizar processos manuais, como a checagem de prazos de validade, para prevenir perdas e garantir uma gestão de estoque mais eficiente.
 
-Construído como uma aplicação web, o sistema oferece uma interface simples e funcional, acessível de qualquer navegador, e já conta com funcionalidades essenciais para o dia a dia.
 
 ### **Funcionalidades Atuais**
 

@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #2e8b57;
+    color: white;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Container principal para o layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilo do menu lateral */
+.sidebar {
+    width: 200px;
+    background-color: #2e8b57;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-button {
+    background-color: #3cb371;
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #2e8b57;
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para as seções */
+.form-section, .list-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2e8b57;
+    border-bottom: 2px solid #2e8b57;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos campos do formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 98%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo dos botões de ação */
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.action-button:hover {
+    background-color: #ccc;
+}
+
+.action-button.green {
+    background-color: #2e8b57;
+    color: white;
+}
+
+.action-button.green:hover {
+    background-color: #3cb371;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.filters label {
+    margin-left: 15px;
+}
+
+.no-products {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+
+@media (max-width: 768px) {
+    /* Esconde a barra lateral em telas pequenas */
+    .sidebar {
+        display: none;
+    }
+
+    /* O conteúdo principal ocupa toda a largura */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Faz a tabela se comportar como blocos */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Esconde o cabeçalho da tabela */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    /* Formata cada linha como um bloco */
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    /* Configura cada célula para exibir a label */
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    /* Adiciona a label da coluna antes do conteúdo da célula */
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+}

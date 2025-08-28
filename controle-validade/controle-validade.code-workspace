@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../../Downloads/controle-validade/controle-validade"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos - Sistema de Validade</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ValidaFARMA</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <a href="/" class="menu-button">Cadastrar produto</a>
+            <a href="/lista" class="menu-button">Ver produtos</a>
+            <a href="/alerta" class="menu-button">Alertas</a>
+            <a href="/gerar-csv" class="menu-button">Gerar planilha CSV</a>
+        </aside>
+
+        <main class="content">
+            <div class="list-section">
+                <h2>Produtos em estoque</h2>
+                <div class="filters">
+                    <input type="text" placeholder="Buscar produto">
+                    <label>Filtros:</label>
+                    <input type="checkbox" id="vencidos">
+                    <label for="vencidos">Vencidos</label>
+                    <input type="checkbox" id="proximos">
+                    <label for="proximos">Próximos a vencer</label>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Código</th>
+                            <th>Lote</th>
+                            <th>Data de validade</th>
+                            <th>Quantidade</th>
+                            <th>Fornecedor</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="produto : ${produtos}">
+                            <td data-label="Nome" th:text="${produto.nome}"></td>
+                            <td data-label="Código" th:text="${produto.codigo}"></td>
+                            <td data-label="Lote" th:text="${produto.lote}"></td>
+                            <td data-label="Data de validade" th:text="${produto.dataValidade}"></td>
+                            <td data-label="Quantidade" th:text="${produto.quantidade}"></td>
+                            <td data-label="Fornecedor" th:text="${produto.fornecedor}"></td>
+                            <td data-label="Opções">
+                                <form th:action="@{/remover}" method="post">
+                                    <input type="hidden" name="codigo" th:value="${produto.codigo}" />
+                                    <button type="submit" class="action-button green">Remover</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

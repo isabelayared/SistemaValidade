@@ -1,47 +1,54 @@
-# ValidaFARMA: Sistema de Controle de Estoque para Farmácias
+# 💊 PharmaStock - Sistema de Controle de Farmácia
 
-O **ValidaFARMA** é um sistema de gerenciamento de estoque desenvolvido para otimizar o controle de validade de produtos em farmácias e drogarias. Este projeto surgiu da necessidade de automatizar processos manuais, como a checagem de prazos de validade, para prevenir perdas e garantir uma gestão de estoque mais eficiente.
+![Status](https://img.shields.io/badge/Status-Concluído-green)
+![Tech](https://img.shields.io/badge/Stack-FullStack-blue)
+
+Um sistema completo de gerenciamento de estoque farmacêutico focado na prevenção de perdas por validade. O sistema permite controle de lotes, visualização de status de validade (semáforo) e dashboards com gráficos em tempo real.
+
+## <img width="1846" height="956" alt="image" src="https://github.com/user-attachments/assets/35954f22-afd0-46c9-bb99-f54510f554af" />
 
 
-### **Funcionalidades Atuais**
 
-* **Cadastro de Produtos:** Registro de novos itens no estoque, incluindo informações como nome, código, lote, quantidade e data de validade.
-* **Gestão de Estoque:** Listagem completa de todos os produtos cadastrados e a funcionalidade de remoção de itens, simulando uma venda ou retirada de estoque.
-* **Alertas de Validade:** Emissão de alertas para produtos que estão a seis meses ou menos de sua data de validade.
-* **Relatórios e Documentos:**
-    * **Geração de CSV:** Exporta todos os dados do estoque para um arquivo `.csv`, permitindo análise em planilhas externas.
-    * **Emissão de Etiquetas PDF:** Cria etiquetas personalizadas em formato PDF com as principais informações do produto, prontas para impressão.
-* **Interface de Usuário (UI):** Uma interface web intuitiva e responsiva, que se adapta a diferentes tamanhos de tela (desktops, tablets e celulares).
+## 🚀 Funcionalidades
 
-### **Tecnologias Utilizadas**
+- **Cadastro Inteligente:** Registro de produtos com controle de lotes e validade.
+- **Semáforo de Validade:**
+  - 🔴 **Vencido:** Produtos com data expirada.
+  - 🟡 **Atenção:** Vencimento em menos de 6 meses.
+  - 🟢 **Seguro:** Vencimento superior a 6 meses.
+- **Dashboard Visual:** Gráficos de barras para análise de estoque.
+- **Indicadores (KPIs):** Resumo rápido de itens críticos e totais.
 
-* **Back-end:** Java
-* **Framework:** Spring Boot
-* **Front-end:** HTML e CSS
-* **Template Engine:** Thymeleaf
-* **Geração de PDF:** iText
-* **Gerenciamento de Pacotes:** Maven
+## 🛠️ Tecnologias Utilizadas
 
-### **Como Executar o Projeto**
+**Backend:**
+- [NestJS](https://nestjs.com/) (Framework Node.js)
+- [Prisma ORM](https://www.prisma.io/) (Banco de Dados)
+- [MySQL](https://www.mysql.com/) (Banco Relacional)
 
-Para rodar o projeto localmente, siga os seguintes passos:
+**Frontend:**
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/) (Estilização Moderna)
+- [Recharts](https://recharts.org/) (Gráficos)
 
-1.  Clone este repositório para sua máquina:
-    `git clone https://github.com/SeuUsuario/NomeDoRepositorio.git`
-2.  Navegue até o diretório do projeto:
-    `cd NomeDoRepositorio`
-3.  Execute a aplicação Spring Boot usando o Maven:
-    `./mvnw spring-boot:run`
-4.  Acesse a aplicação no seu navegador:
-    `http://localhost:8080`
+## 📦 Como Rodar o Projeto
 
-### **Próximos Passos**
+### Pré-requisitos
+- Node.js instalado
+- MySQL rodando (Local ou Docker)
 
-O projeto continuará a evoluir com a implementação de novas funcionalidades:
+### 1. Configurando o Backend (API)
 
-* **Persistência de Dados:** Integração com um banco de dados para que os dados do estoque sejam salvos permanentemente e não se percam ao reiniciar a aplicação.
-* **Integração com Leitor de Código de Barras:** Permitir que o cadastro e a busca de produtos sejam feitos de forma ainda mais rápida e automatizada, usando um leitor de código de barras.
+```bash
+# Entre na pasta do backend
+cd backend
 
-### **Contato**
+# Instale as dependências
+npm install
 
-Feito com carinho por [Isabela Yared](https://github.com/isabelayared) ❤️
+# Configure o banco de dados
+# Crie um arquivo .env com sua URL do banco: DATABASE_URL="mysql://root:senha@localhost:3306/farmacia"
+npx prisma migrate dev --name init
+
+# Rode o servidor
+npm run start:dev
